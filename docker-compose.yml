@@ -1,0 +1,13 @@
+services:
+  flutter:
+    build: .
+    image: flutter-app-builder:latest
+    volumes:
+      - .:/workspace:cached
+    working_dir: /workspace
+    environment:
+      - PUB_HOSTED_URL=https://pub.dev
+    stdin_open: true
+    tty: true
+    # If you want to access GUI apps (e.g., for desktop builds) or run an emulator,
+    # you may need additional configuration (Docker on Linux, display/socket forwarding).

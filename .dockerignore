@@ -1,0 +1,16 @@
+# Ignore build, caches and IDE files
+build
+.dart_tool
+.idea
+.vscode
+.gradle
+/.gradle
+.pub-cache
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.metadata
+pubspec.lock
+**/build/
+.git
+.gitignore
