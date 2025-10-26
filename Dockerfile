@@ -29,7 +29,7 @@ ENV FLUTTER_ROOT=/opt/flutter
 ENV PUB_HOSTED_URL=https://pub.dev
 
 # Expose ports commonly used for web/devtools when running `flutter run -d web-server`
-EXPOSE 8080 9222
+EXPOSE 8000
 
-# Default to an interactive shell so you can use the container for dev tasks
-CMD ["bash"]
+# Run FastAPI app
+CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1"]
